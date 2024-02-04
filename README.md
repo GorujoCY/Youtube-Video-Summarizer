@@ -10,6 +10,12 @@ To setup from source first open the command line to the directory you installed 
 For windows make sure you install(ed) python with PATH enabled before installation for those commands to work
 
 For linux you may have to install `pip` seperately
+# Current (Large) Language Models in
+### API Based:
+- OpenAI ChatGPT
+- Google Gemini
+### Local
+- ollama AI
 # First time setup
 When you run the script, first you choose the Language Model you want to use, Depending on the choice the next one is to setup an API Key if chosen one that communicates via the API (API Keys will be remembered in a text file), then you will be asked to setup and/or input the YouTube Data v3 API Key in order to retrieve the title of a YouTube video. Finally then refer to `Using it`
 # Using it 
