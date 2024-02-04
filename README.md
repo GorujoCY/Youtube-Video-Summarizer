@@ -13,7 +13,11 @@ For linux you may have to install `pip` seperately
 # First time setup
 When you run the script, first you choose the Language Model you want to use, Depending on the choice the next one is to setup an API Key if chosen one that communicates via the API (API Keys will be remembered in a text file), then you will be asked to setup and/or input the YouTube Data v3 API Key in order to retrieve the title of a YouTube video. Finally then refer to `Using it`
 # Using it 
-.
+You will be prompted to choose a Language (AI) Model (they are not remembered in any case say APIs are down or different result of the AI Models). 
+
+Then assuming the api key text files are not empty, the script will read the api key text file based on your AI model choice (if chosen a local model this will not be affected), Then it will check for the YouTube Data API v3 Api key text file and finally Prompt you to enter a YouTube video url, from there you enter a `youtube.com/watch` or `youtu.be` URL of a video. 
+
+After entering the url, the YouTube Video ID is fetched in order to retrieve the transcript and title of the video from the API and then that data is being fed a standard prompt (if you notice inconsistency in the prompt, or rather they are not the same don't hesitate to open an issue) to the Language model you chose and Outputs the answer (or a summary).
 # Known issues
 - [ ] Contents on the file does not assume it is the actual token (because it doesnt do an api test to check, commited to fix in the next versions)
 - [ ] During internal testing, OpenAI's API doesnt work, always being rate limited on my API Key (this is why I want the community to see for themselves and help fix any issues)
