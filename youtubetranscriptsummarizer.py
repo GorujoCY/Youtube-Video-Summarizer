@@ -122,7 +122,7 @@ def retrieve_video_title():
     return title_retrieval.json()['items'][0]['snippet']['title']
 
 try:
-    initial_transcript = ytapi.get_transcript(f"{youtube_video_id}")
+    initial_transcript = ytapi.get_transcript(f"{youtube_video_id}", languages=['en'])
     transcript = """"""
     for transcript_retrieval in range(0, len(initial_transcript)):
         transcript += initial_transcript[transcript_retrieval]['text'] + "\n"
