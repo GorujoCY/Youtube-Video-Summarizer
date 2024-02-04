@@ -22,4 +22,4 @@ After entering the url, the YouTube Video ID is fetched in order to retrieve the
 - [ ] Contents on the file does not assume it is the actual token (because it doesnt do an api test to check, commited to fix in the next versions)
 - [ ] During internal testing, OpenAI's API doesnt work, always being rate limited on my API Key (this is why I want the community to see for themselves and help fix any issues)
 # Feedback
-I'm open to suggestions for more online (supporting API) and local AI models, and improvement. And with the software being GPLv3 would love to see the community implement something like GUI Versions.
+I'm open to suggestions for more online (supporting API) and local AI models and improvement. And with the software being GPLv3 would love to see the community implement something like GUI Versions.
