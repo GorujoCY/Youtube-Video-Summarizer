@@ -30,5 +30,7 @@ After entering the url, the YouTube Video ID is fetched in order to retrieve the
 ^ the cause of this one is not very clear after testing (for example one video from one channel doesnt work but then another video from the same channel works) unfortunately but 
 
 A workaround of this is when prompted, copy the transcript manually, put it into a [single line converter](https://codebeautify.org/multiline-to-single-line) and paste it (I could make it easier but implementing a way to stop the loop without it intentionally stopping the user could be hard and frustrating every time my testing goes fine and not on the end product).
+
+I've created an [issue](https://github.com/jdepoix/youtube-transcript-api/issues/253) from the original author of the transcript api and I hope it can be resolved...
 # Feedback
 I'm open to suggestions for more online (supporting API) and local AI models and improvement. And with the software being GPLv3 would love to see the community implement something like GUI Versions.
