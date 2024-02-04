@@ -135,7 +135,7 @@ if LM_selection == 2:
     print(cgptresponse.choices[0].message)
     input()
 elif LM_selection == 1:
-    google_ai_response = gmodel.generate_content(f"""Please read the following transcript of a youtube video and answer this: '{retrieve_video_title()}' \nThis is the transcript of the video: \n{transcript}""")
+    google_ai_response = gmodel.generate_content(f"""Please read the following transcript of a youtube video and answer this: '{retrieve_video_title()}' \nadditionally provide a concise summary of the video, should the transcript have no answer in it. This is the transcript of the video: \n{transcript}""")
     print(google_ai_response.text)
     input()
 elif LM_selection == 3:
