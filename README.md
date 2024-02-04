@@ -27,7 +27,7 @@ After entering the url, the YouTube Video ID is fetched in order to retrieve the
 - [ ] During internal testing, OpenAI's API doesnt work, always being rate limited on my API Key (this is why I want the community to see for themselves and help fix any issues)
 - [ ] Videos transcript sometimes dont always return, causing a "Transcript Disabled" error and puts the responsibility on the user because the transcript is there and acessible.
 
-^ the cause is not very clear after testing (for example one video from one channel doesnt work but then another video from the same channel works) unfortunately but 
+^ the cause of this one is not very clear after testing (for example one video from one channel doesnt work but then another video from the same channel works) unfortunately but 
 
 A workaround I can think of this is when prompted, copy the transcript manually, put it into a [single line converter](https://codebeautify.org/multiline-to-single-line) and paste it (I could make it easier but implementing a way to stop the loop without it intentionally stopping the user could be hard and frustrating every time my testing goes fine and not on the end product).
 # Feedback
