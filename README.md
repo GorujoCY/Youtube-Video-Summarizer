@@ -12,6 +12,7 @@ For Linux it should be similar to Windows, [Download the binaries](https://githu
 To setup from source first open the command line to the directory you installed this repository and type `pip install -r requirements.txt` to install the necessary PyPI packages for the software to work, after that you can run it by double clicking the script or in the command line using `py(thon) youtubetranscriptsummarizer.py` 
 
 For windows make sure you install(ed) python with PATH enabled before installation for those commands to work
+
 For linux you may have to install `pip` seperately
 # First time setup
 
