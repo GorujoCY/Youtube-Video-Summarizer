@@ -11,7 +11,9 @@ For windows make sure you install(ed) python with PATH enabled before installati
 
 For linux you may have to install `pip` seperately
 # First time setup
-
+When you run the script, first you choose the Language Model you want to use, Depending on the choice the next one is to setup an API Key if chosen one that communicates via the API (API Keys will be remembered in a text file), then you will be asked to setup and/or input the YouTube Data v3 API Key in order to retrieve the title of a YouTube video. Finally then refer to `Using it`
+# Using it 
+.
 # Known issues
 - [ ] Contents on the file does not assume it is the actual token (because it doesnt do an api test to check, commited to fix in the next versions)
 - [ ] During internal testing, OpenAI's API doesnt work, always being rate limited on my API Key (this is why I want the community to see for themselves and help fix any issues)
