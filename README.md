@@ -1,5 +1,5 @@
 # Youtube-Video-Summarizer
-A Youtube Video Summarizer written in Python using transcripts and YouTube video title (using the API) to retrieve a summary and feed a specific prompt to AI models (LM or LLM) either local or using API
+A CLI Youtube Video Summarizer written in Python using transcripts and YouTube video title (using the API) to retrieve a summary and feed a specific prompt to AI models (LM or LLM) either local or using API
 # Get started Windows
 To get started for Windows download the .exe binaries I've created in the [Releases](https://github.com/GorujoCY/Youtube-Video-Summarizer/releases) and run the software, all the necessary packages are ready to use no setup should be needed
 # Get Started Linux
