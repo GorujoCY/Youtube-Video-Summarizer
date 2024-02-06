@@ -112,9 +112,18 @@ elif LM_selection == 1:
 #User input for a youtube URL  
 youtube_url = input("Now Enter the Youtube Video URL to summarize: ")
 global youtube_video_id
-#using regular expression to filter any parameters
-initial_youtube_video_id = youtube_url.strip(f"https://youtube.com/watch?v=")
-youtube_video_id = re.sub("&(.*)", "", initial_youtube_video_id)
+#check for url pattern and replace it with blank, keeping the youtube video id
+if youtube_url.startswith("https://www.youtube.com/watch?v="):
+   initial_youtube_video_id = youtube_url.replace("https://www.youtube.com/watch?v=", "")
+elif youtube_url.startswith("https://youtu.be"):
+    initial_youtube_video_id = youtube_url.replace("https://youtu.be/", "")
+#using regular expression to filter any parameters inputted by the user
+if youtube_url.find("&") != -1:
+    youtube_video_id = re.sub("&(.*)", "", initial_youtube_video_id)
+elif youtube_url.find("?") != -1:
+    youtube_video_id = re.sub("\\?(.*)", "", initial_youtube_video_id)
+else:
+    youtube_video_id = initial_youtube_video_id
 
 #retrieve video title of the id (using requests) and transcript (using youtube transcript api) and feed the message to the Model you chose and give the output later
 def retrieve_video_title():
@@ -127,8 +136,17 @@ try:
     for transcript_retrieval in range(0, len(initial_transcript)):
         transcript += initial_transcript[transcript_retrieval]['text'] + "\n"
 except youtube_transcript_api.TranscriptsDisabled:
-    print("Seems like transcripts/subtitles are disabled via API or the video itself or they havent been generated, you can try manually inserting the transcript if there's a case of that")
-    transcript = input("""> """)
+    print("Seems like transcripts/subtitles are disabled for this video (can be multiple reasons eg. age restricted or by the creator)")
+    input()
+    exit()
+except youtube_transcript_api.NoTranscriptFound:
+    print("No English Transcript was found, sorry for the inconvinience.")
+    input()
+    exit()
+except youtube_transcript_api.NoTranscriptAvailable:
+    print("No transcript is available for this video it seems. You can wait for the generated one or the creator just didnt make it available")
+    input()
+    exit()
 
 if LM_selection == 2:
     cgptresponse = cgptapi.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": f"""Please read the following transcript of a youtube video and answer this: '{retrieve_video_title()}' \nThis is the transcript of the video: \n{transcript}"""}])

@@ -25,10 +25,6 @@ After entering the url, the YouTube Video ID is fetched in order to retrieve the
 # Known issues
 - [ ] Contents on the file does not assume it is the actual token (because it doesnt do an api test to check, commited to fix in the next versions)
 - [ ] During internal testing, OpenAI's API doesnt work, always being rate limited on my API Key (this is why I want the community to see for themselves and help fix any issues)
-- [ ] Videos transcript sometimes dont always return, causing a "Transcript Disabled" error and puts the responsibility on the user because the transcript is there and acessible.
-
-^ the cause of this one is not very clear after testing (for example one video from one channel doesnt work but then another video from the same channel works) unfortunately but 
-
-A workaround of this is when prompted, copy the transcript manually, put it into a [single line converter](https://codebeautify.org/multiline-to-single-line) and paste it (I could make it easier but implementing a way to stop the loop without it intentionally stopping the user could be hard and frustrating every time my testing goes fine and not on the end product).
+- [x] ~~Videos transcript sometimes dont always return, causing a "Transcript Disabled" error and puts the responsibility on the user because the transcript is there and acessible.~~
 # Feedback
 I'm open to suggestions for more online (supporting API) and local AI models and improvement. And with the software being GPLv3 would love to see the community implement something like GUI Versions.
