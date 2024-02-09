@@ -26,7 +26,7 @@ After entering the url, the YouTube Video ID is fetched in order to retrieve the
 - [ ] Contents on the file does not assume it is the actual token (because it doesnt do an api test to check, commited to fix in the next versions)
 - [x] ~~During internal testing, OpenAI's API doesnt work, always being rate limited on my API Key (this is why I want the community to see for themselves and help fix any issues)~~
 
-(Reason: After research, OpenAI is not so generously free, when you register with a new phone number OpenAI grants you specific credits as a trial only that it can then expire in approx. 3 months, May remove this option because it is meant to be an accessible type of program, not something you want to pay to use). Making an read only api key does not change it seems.
+(Reason: After research, OpenAI is not so generously free, when you register with a new phone number OpenAI grants you specific credits as a trial only that it can then expire in approx. 3 months, May remove this option because it is meant to be an accessible type of program, not something you want to pay to use. Making an read only api key does not change it seems.)
 - [x] ~~Videos transcript sometimes dont always return, causing a "Transcript Disabled" error and puts the responsibility on the user because the transcript is there and acessible.~~
 # Feedback
 I'm open to suggestions for more online (supporting API) and local AI models and improvement. And with the software being GPLv3 would love to see the community implement something like GUI Versions.
