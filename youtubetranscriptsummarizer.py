@@ -22,7 +22,7 @@ elif platform == "darwin":
 
 
 #user input for (L)LM selections
-print("REMEMBER TO KEEP API KEYS TO YOURSELF AND NOT SHARE IT [Also during testing OpenAI did not work for me while Google did, it may work for you however].\n\nTo get started, Please select an AI Model API:\n1. Google Gemini[LIMITED REGIONS, SEE https://ai.google.dev/available_regions]\n2. OpenAI ChatGPT \n3. Ollama (Local) \n[More local and Networked (Large) Language Models to come when available or suggested]")
+print("REMEMBER TO KEEP API KEYS TO YOURSELF AND NOT SHARE IT [Also during testing OpenAI did not work for me while Google did, it may work for you however].\n\nTo get started, Please select an AI Model API:\n1. Google Gemini[LIMITED REGIONS, SEE https://ai.google.dev/available_regions]\n2. OpenAI ChatGPT[FREEMIUM API MODEL] \n3. Ollama (Local) \n[More local and Networked (Large) Language Models to come when available or suggested]")
 LM_selection = int(input("Select an AI in number: "))
 
 
