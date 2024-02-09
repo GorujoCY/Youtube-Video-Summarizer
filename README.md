@@ -16,6 +16,7 @@ For linux you may have to install `pip` seperately
 - Google Gemini
 ### Local
 - Ollama AI
+
 To add: OpenChat
 # First time setup
 When you run the script, first you choose the Language Model you want to use, Depending on the choice the next one is to setup an API Key if chosen one that communicates via the API (API Keys will be remembered in a text file), then you will be asked to setup and/or input the YouTube Data v3 API Key in order to retrieve the title of a YouTube video. Finally then refer to `Using it`
