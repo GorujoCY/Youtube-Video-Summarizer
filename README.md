@@ -12,7 +12,7 @@ For windows make sure you install(ed) python with PATH enabled before installati
 For linux you may have to install `pip` seperately
 # Current (Large) Language Models in
 ### API Based:
-- OpenAI ChatGPT (if in decision to keep)
+- OpenAI ChatGPT
 - Google Gemini
 ### Local
 - Ollama AI
