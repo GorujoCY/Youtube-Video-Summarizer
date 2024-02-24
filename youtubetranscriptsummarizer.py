@@ -132,8 +132,6 @@ elif youtube_url.find("?") != -1:
 else:
     youtube_video_id = initial_youtube_video_id
 
-print(youtube_video_id)
-input()
 #retrieve video title of the id (using requests) and transcript (using youtube transcript api) and feed the message to the Model you chose and give the output later
 def retrieve_video_title():
     title_retrieval = requests.get(f"https://youtube.googleapis.com/youtube/v3/videos", params={'part': 'snippet', 'id': f'{youtube_video_id}', 'key': f'{ytapikey}'})
