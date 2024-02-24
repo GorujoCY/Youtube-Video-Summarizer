@@ -109,12 +109,19 @@ elif LM_selection == 1:
     generativeai.configure(api_key=f"{geminiapikey}")
     gmodel = generativeai.GenerativeModel('gemini-pro')
 
-#User input for a youtube URL  
+#User input for a youtube URL
 youtube_url = input("Now Enter the Youtube Video URL to summarize: ")
 global youtube_video_id
+
+def strip_spaces(): #self explanatory, suggested by Maebbie
+    global youtube_url
+    if youtube_url.startswith(" "):
+        youtube_url = youtube_url.strip(" ")
+
+strip_spaces()
 #check for url pattern and replace it with blank, keeping the youtube video id
 if youtube_url.startswith("https://www.youtube.com/watch?v="):
-   initial_youtube_video_id = youtube_url.replace("https://www.youtube.com/watch?v=", "")
+    initial_youtube_video_id = youtube_url.replace("https://www.youtube.com/watch?v=", "")
 elif youtube_url.startswith("https://youtu.be"):
     initial_youtube_video_id = youtube_url.replace("https://youtu.be/", "")
 #using regular expression to filter any parameters inputted by the user
@@ -125,6 +132,8 @@ elif youtube_url.find("?") != -1:
 else:
     youtube_video_id = initial_youtube_video_id
 
+print(youtube_video_id)
+input()
 #retrieve video title of the id (using requests) and transcript (using youtube transcript api) and feed the message to the Model you chose and give the output later
 def retrieve_video_title():
     title_retrieval = requests.get(f"https://youtube.googleapis.com/youtube/v3/videos", params={'part': 'snippet', 'id': f'{youtube_video_id}', 'key': f'{ytapikey}'})
