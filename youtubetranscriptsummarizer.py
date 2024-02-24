@@ -22,7 +22,7 @@ elif platform == "darwin":
 
 
 #user input for (L)LM selections
-print("REMEMBER TO KEEP API KEYS TO YOURSELF AND NOT SHARE IT [Also during testing OpenAI did not work for me while Google did, it may work for you however].\n\nTo get started, Please select an AI Model API:\n1. Google Gemini[LIMITED REGIONS, SEE https://ai.google.dev/available_regions]\n2. OpenAI ChatGPT \n3. Ollama (Local) \n[More local and Networked (Large) Language Models to come when available or suggested]")
+print("REMEMBER TO KEEP API KEYS TO YOURSELF AND NOT SHARE IT [Also during testing OpenAI did not work for me while Google did, it may work for you however].\n\nTo get started, Please select an AI Model API:\n1. Google Gemini[LIMITED REGIONS, SEE https://ai.google.dev/available_regions]\n2. OpenAI ChatGPT[FREEMIUM API MODEL] \n3. Ollama (Local) \n[More local and Networked (Large) Language Models to come when available or suggested]")
 LM_selection = int(input("Select an AI in number: "))
 
 
@@ -109,12 +109,19 @@ elif LM_selection == 1:
     generativeai.configure(api_key=f"{geminiapikey}")
     gmodel = generativeai.GenerativeModel('gemini-pro')
 
-#User input for a youtube URL  
+#User input for a youtube URL
 youtube_url = input("Now Enter the Youtube Video URL to summarize: ")
 global youtube_video_id
+
+def strip_spaces(): #self explanatory, suggested by Maebbie
+    global youtube_url
+    if youtube_url.startswith(" "):
+        youtube_url = youtube_url.strip(" ")
+
+strip_spaces()
 #check for url pattern and replace it with blank, keeping the youtube video id
 if youtube_url.startswith("https://www.youtube.com/watch?v="):
-   initial_youtube_video_id = youtube_url.replace("https://www.youtube.com/watch?v=", "")
+    initial_youtube_video_id = youtube_url.replace("https://www.youtube.com/watch?v=", "")
 elif youtube_url.startswith("https://youtu.be"):
     initial_youtube_video_id = youtube_url.replace("https://youtu.be/", "")
 #using regular expression to filter any parameters inputted by the user
